@@ -35,3 +35,24 @@ void freeCube(int ***C,int n){
     free(C);
     return;
 }
+
+
+
+
+
+int ***loadCube(FILE *F,int *n){
+    int i,j,k;
+    int ***C=NULL;
+    rewind(F);
+    fscanf(F,"%d",n);
+    C=(int***) calloc(*n,sizeof(int**));
+    for(i=0;i<*n;i++){
+        C[i]=(int**) calloc(*n,sizeof(int*));
+        for(j=0;j<*n;j++){
+            C[i][j]=(int*) calloc(*n,sizeof(int));
+            for(k=0;k<*n;k++)
+                fscanf(F,"%d",&C[i][j][k]);
+        }
+    }
+    return C;
+}

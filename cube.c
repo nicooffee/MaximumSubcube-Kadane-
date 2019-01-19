@@ -6,7 +6,12 @@
 
 
 
-
+/**
+ * createCube:
+ * 
+ * Función que crea y retorna un arreglo tridimensional de tamaño n el cual es llenado 
+ * con valores aleatorios dentro del rango [-MAX,MAX].
+ */
 int ***createCube(int n){
     int i,j,k;
     int ***C=(int***) calloc(n,sizeof(int**));
@@ -24,7 +29,11 @@ int ***createCube(int n){
 
 
 
-
+/**
+ * freeCube:
+ * 
+ * Función que libera la memoria del arreglo tridimensional C.
+ */
 void freeCube(int ***C,int n){
     int i,j;
     for(i=0;i<n;i++){

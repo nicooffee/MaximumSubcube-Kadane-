@@ -6,7 +6,12 @@
 
 
 
-
+/**
+ * kadaneCube:
+ * 
+ * Función que retorna la suma máxima dentro de un cubo C, como también los límites
+ * del subcubo que dan como resultado a dicha suma. 
+ */
 int kadaneCube(int ***C,int n,int *xa,int *xb,int *ya,int *yb,int *za,int *zb){
     int i,j,k,l;
     int sumMax=-2147483648,sumAux,xaAux,xbAux,yaAux,ybAux;
@@ -40,7 +45,13 @@ int kadaneCube(int ***C,int n,int *xa,int *xb,int *ya,int *yb,int *za,int *zb){
 
 
 
-
+/**
+ * kadaneMatrix:
+ * 
+ * Función que retorna la suma máxima dentro de una matriz M. Además, la
+ * función retorna los límites del subrectángulo que dan resultado a la suma
+ * máxima dentro de M.
+ */
 int kadaneMatrix(int **M,int n,int *xa,int *xb,int *ya,int *yb){
     int i,j,k;
     int sumMax=-2147483648,sumAux,xaAux=0,xbAux=0;
@@ -67,7 +78,12 @@ int kadaneMatrix(int **M,int n,int *xa,int *xb,int *ya,int *yb){
 
 
 
-
+/**
+ * kadaneArray: 
+ * 
+ * Función que retorna la suma máxima dentro de un arreglo A. Como también los límites
+ * del subarreglo que dan resultado a la suma. 
+ */
 int kadaneArray(int *A,int n, int *xa, int* xb){
     int sumaLocal,sumaTotal;
     int i,aux=0;
